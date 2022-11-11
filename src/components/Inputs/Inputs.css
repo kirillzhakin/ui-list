@@ -1,0 +1,31 @@
+@import "../../vendor/fonts/fonts.css";
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0 0;
+}
+
+.inputs__title {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  color: #1A2027;
+  font-weight: 700;
+
+
+}
+.inputs__container {
+  display: grid;
+  max-width: 800px;
+  justify-content: center;
+  padding: 24px;
+  background-color: #fff;
+  border: 1px solid #e7ebf0;
+  border-radius: 10px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  grid-template-columns: repeat(3, minmax(64px, auto));
+  grid-column-gap: 16px;
+}

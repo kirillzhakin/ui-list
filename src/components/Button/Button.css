@@ -1,6 +1,7 @@
-@import "../../../vendor/fonts/fonts.css";
+@import "../../vendor/fonts/fonts.css";
 
 .button {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +21,8 @@
   padding: 6px 8px;
   color: #1976d2;
   text-decoration: none;
+  user-select: none;
+  overflow: hidden;
 }
 .button:after {
   content: "";
@@ -32,8 +35,8 @@
   left: var(--mouse-x);
   transform-style: flat;
   transform: translate3d(-50%, -50%, 0);
-  background: #1565c0;
   border-radius: 100%;
+  background: rgba(25, 118, 210, 0.3);
   transition: width 0.3s ease, height 0.3s ease;
 }
 
@@ -43,7 +46,8 @@
 .button:active:after {
   width: 300px;
   height: 300px;
-
+  width: var(--data-Value);
+  height: var(--data-Value);
 }
 
 .contained {

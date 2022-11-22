@@ -1,6 +1,6 @@
 import Button from "../Button/Button";
 import IconButton from "../IconButton/IconButton";
-import "../../index.css";
+import "../../element.css";
 
 function Buttons() {
   return (

@@ -6,7 +6,7 @@ function Navigation() {
   return (
     <nav className="nav">
       <ul className="nav-list">
-      <li>
+        <li>
           <NavLink className="nav-list__link" to="/">
             Home
           </NavLink>
@@ -23,7 +23,12 @@ function Navigation() {
         </li>
         <li>
           <NavLink className="nav-list__link" to="/radiobutton">
-            Radio Group
+            Radio Button
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="nav-list__link" to="/textfield">
+            TextField
           </NavLink>
         </li>
       </ul>

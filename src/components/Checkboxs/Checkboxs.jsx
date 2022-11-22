@@ -1,5 +1,5 @@
 import Checkbox from "../Checkbox/Checkbox";
-import "../../index.css";
+import "../../element.css";
 
 function Checkboxs() {
   return (
@@ -7,18 +7,18 @@ function Checkboxs() {
       <h2 className="element__title">Basic checkboxes</h2>
 
       <div className="element__container element__container_flex">
-        <Checkbox checked="checked" />
-        <Checkbox checked="" />
-        <Checkbox checked="" disabled="disabled" />
-        <Checkbox checked="checked" disabled="disabled" />
+        <Checkbox id="1" checked="checked" />
+        <Checkbox id="2" checked="" />
+        <Checkbox id="3" checked="" disabled="disabled" />
+        <Checkbox id="4" checked="checked" disabled="disabled" />
       </div>
 
       <h2 className="element__title">Label</h2>
       <p className="element__text">You can provide a label to the Checkbox</p>
 
       <div className="element__container element__container_label">
-        <Checkbox checked="checked" label="Label"/>
-        <Checkbox checked="" disabled="disabled" label="Disabled"/>
+        <Checkbox id="label" checked="checked" label="Label"/>
+        <Checkbox id="disabled" checked="" disabled="disabled" label="Disabled"/>
       </div>
     </section>
   );

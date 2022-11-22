@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 import "./Checkbox.css";
 
-function Checkbox({ checked, disabled, label }) {
+function Checkbox({ id, checked, disabled, label }) {
   const checkboxRef = useRef();
 
   const handleChange = (e) => {
@@ -11,20 +11,20 @@ function Checkbox({ checked, disabled, label }) {
     console.log(checkboxRef.current.checked);
   };
   return (
-    <>
     <label className={`checkbox ${disabled ? `disabled ` : ""} `}>
       <input
         ref={checkboxRef}
+        id={id}
         type="checkbox"
         defaultChecked={checked}
         onChange={(e) => handleChange(e)}
       />
-      <div className={`checkbox__checkmark ${disabled ? `disabled ` : ""}`}></div>
+      <div
+        className={`checkbox__checkmark ${disabled ? `disabled ` : ""}`}
+      ></div>
       <div className="checkbox__body"></div>
-      <div className="checkbox__label">{label}</div>
-
+      <span className="checkbox__label">{label}</span>
     </label>
-    </>
   );
 }
 

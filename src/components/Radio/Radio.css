@@ -1,42 +1,41 @@
 @import "../../vendor/fonts/fonts.css";
 
-.checkbox input {
+.radio input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.checkbox {
+.radio {
   position: relative;
   display: flex;
   cursor: pointer;
   user-select: none;
 }
 
-.checkbox .checkbox__body {
+.radio .radio__body {
   position: relative;
   padding: 20px 20px;
   border-radius: 50%;
 }
-.checkbox .checkbox__body:hover {
+.radio .radio__body:hover {
   background-color: rgba(25, 118, 210, 0.04);
 }
 
-.checkbox input:checked ~ .checkbox__checkmark {
-  background-color: #1976d2;
-  border: 1px solid transparent;
+.radio input:checked ~ .radio__checkmark {
+  border: 2px solid #1976d2;
 }
 
-.checkbox input:checked ~ .disabled {
-  background-color: rgba(0, 0, 0, 0.26);
+.radio input:checked ~ .disabled {
+  border: 2px solid rgba(0, 0, 0, 0.26);
 }
 
-.checkbox input:checked ~ .checkbox__checkmark:after {
+.radio input:checked ~ .radio__checkmark:after {
   opacity: 1;
 }
 
-.checkbox .checkbox__checkmark {
+.radio .radio__checkmark {
   display: inline-flex;
   position: absolute;
   top: 12px;
@@ -46,25 +45,28 @@
   background-color: #fff;
   border: 2px solid rgba(0, 0, 0, 0.6);
   transition: background-color 0.1s ease;
-  border-radius: 2px;
+  border-radius: 50%;
 }
 
-.checkbox .disabled {
+.radio .disabled {
   border: 2px solid rgba(0, 0, 0, 0.26);
 }
 
-.checkbox .checkbox__checkmark:after {
+.radio .radio__checkmark:after {
   content: "";
   position: absolute;
-  left: 4px;
-  top: 0;
-  width: 6px;
-  height: 10px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  left: 2px;
+  top: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #1976d2;
+  border-radius: 50%;
   opacity: 0;
   transition: opacity 0.1s ease;
+}
+
+.radio .disabled::after {
+  background-color: rgba(0, 0, 0, 0.26);
 }
 
 .disabled {
@@ -72,7 +74,7 @@
   pointer-events: none;
 }
 
-.checkbox__label {
+.radio__label {
   display: flex;
   align-items: center;
   font-weight: 400;

@@ -4,7 +4,6 @@
   min-height: 600px;
   display: flex;
   flex-direction: column;
-  margin: 0;
 }
 
 .element__title {
@@ -16,7 +15,7 @@
 }
 
 .element__text {
-  max-width: 800px;
+  width: 100%;
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0px;
@@ -25,7 +24,7 @@
 }
 .element__container {
   display: grid;
-  max-width: 800px;
+  width: 100%;
   justify-content: center;
   padding: 24px;
   background-color: #fff;
